@@ -1,0 +1,265 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+/*--------------RESET-----------------*/
+*{
+    margin: 0;
+    padding:0 ;
+}
+
+
+
+
+ul{
+    list-style: none
+}
+a{
+    text-decoration: none
+}
+
+/*--------------HEADER-------------*/
+header{
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 5;
+}
+
+header h1 {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-align: center;
+}
+header img{
+    width: 55px;
+    margin: 15px;
+
+}
+
+header nav ul{
+    text-align: center;
+    list-style: none;
+    font-size: 24px;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 15px 5px;
+    text-align: center;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #2a9d8f
+}
+
+
+/*--------------MAIN-----------------*/
+.hero{
+    /* background-image: url("../img/apple.jfif"); */
+    background-color: black;
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero h2{
+    background-color: #000;
+    font-size: 65px
+}
+.hero p{
+    background-color: #000;
+    margin: 10px 0;
+    font-size: 24px;
+}
+.hero a{
+    color: white;
+    background-color: black;
+    padding: 10px;   
+}
+
+.bienvenidos {
+    text-align: center;
+    margin: 20px 0 ;
+}
+
+
+.imagenes div {
+    width: 100px;
+    height: 200px;
+}
+
+.productos__imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    /* outline: 1px solid red; */
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-auto-columns: 1fr;
+    overflow: hidden;
+}
+
+
+.productos div{
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    display: inline-block;
+    border: solid black;
+    background-color: black;
+
+}
+.productos img{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.productos img:nth-child(6){
+    height: 100px;
+}
+
+.productos h2{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+.productos h3{
+    margin-bottom: 13px;
+    color: white;
+}
+.productos p{
+    color: white;
+}
+.productos div a{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    
+}
+
+.float__whatsapp {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+}
+/*--------------FOOTER-----------------*/
+
+.final {
+    background-color: #ddff55;
+    padding: 5px 0;
+}
+
+.footer__ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes span{
+    display: none;
+}
+
+.final p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Acerca de  */
+
+.iframeyt {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 ;
+}
+
+.acercade {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*  Productos  */
+.productos__2{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/*   Servicios  */
+.service{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/*  Contacto  */
+.contact{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 24px;
+} 
+
+/* Media Query */
+@media screen and (max-width:567px) {
+        .productos__imagenes {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero {
+        height: 300px;
+    }
+
+    .hero h2{
+        font-size: 30px
+    }
+    .hero p{
+        margin: 10px 0;
+        font-size: 24px;
+    }
+    .footer__ul {
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+    }
+    .redes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes span{
+    margin-left: 10px;
+    display: unset;
+    }
+
+    .float__whatsapp{
+        bottom: 10px;
+        right: 5px;
+    }
+}
