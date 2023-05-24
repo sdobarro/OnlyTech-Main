@@ -1,0 +1,31 @@
+header{
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 5;
+    h1{
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        color: black;
+        text-align: center;
+    }
+
+    nav{
+
+        
+        ul{
+            text-align: center;
+            list-style: none;
+            font-size: 24px;
+            li{
+                display: inline-block;
+                margin: 15px 5px;
+                text-align: center;
+                
+                a{
+                    text-decoration: none;
+                    color: #2a9d8f
+                }
+            }
+        }
+    }
+}
