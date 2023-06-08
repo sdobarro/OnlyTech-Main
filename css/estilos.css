@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 * {
   margin: 0;
   padding: 0; }
@@ -9,7 +10,7 @@ ul {
 a {
   text-decoration: none; }
 
-.hero, .contact, .footer__ul {
+.hero, .iframeyt, .footer__ul, strong {
   display: flex;
   justify-content: center; }
 
@@ -35,9 +36,9 @@ header {
         color: #2a9d8f; }
 
 .hero {
-  background-color: black;
+  background-image: url(../img/image.webp);
   width: 100%;
-  height: 550px;
+  height: 590px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -103,13 +104,23 @@ header {
 
 .productos__imagenes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 10px;
   max-width: 1100px;
   margin: 0 auto;
   grid-auto-columns: 1fr;
   overflow: hidden;
   margin-bottom: 10px; }
+  .productos__imagenes div {
+    place-self: center; }
+
+.productos__imagenes .boton {
+  transition: background-color .5s; }
+
+.boton:hover {
+  border-radius: 20px;
+  background-color: beige;
+  color: #000; }
 
 .float__whatsapp {
   position: fixed;
@@ -120,39 +131,90 @@ header {
 .contact {
   margin: 20px 0;
   font-size: 24px; }
+  .contact h1 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    line-height: 1.5; }
 
-/* MAIN Acerca de  */
-.acercade {
-  text-align: center;
-  margin: 20px 0; }
+.horario {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600px;
+  color: #555252;
+  font-family: "Poppins", Arial, Helvetica, sans-serif; }
 
-.acercade h1 {
-  font-family: "Poppins", sans-serif; }
+.formularioContacto {
+  padding-bottom: 20px; }
 
-.acercade h2 {
-  font-family: "Poppins", sans-serif; }
+.formularioContacto .card {
+  background-color: #f6f5e9;
+  border: #0e0e0e solid 2px; }
 
-.acercade img {
-  width: 20em;
-  height: 20rem;
-  margin: 50px;
-  padding: 100px; }
+.formularioContacto .card div form div .btn {
+  border: #0e0e0e solid 2px;
+  color: #0e0e0e; }
 
-.acercade p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-size: 30px; }
+.formularioContacto .card div form div .btn:hover {
+  background-color: #6C757D;
+  color: #f6f5e9; }
 
-.iframeyt {
+.iframemaps {
   display: flex;
   justify-content: center;
   margin: 5px 0; }
 
+/* MAIN Acerca de  */
+.acercade {
+  background-color: #f6f5e9;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding-bottom: 20px; }
+
+.texto {
+  width: 1100px; }
+  .texto p {
+    font-size: 24px; }
+
+.titulo {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center; }
+
+.service {
+  max-width: 1024px;
+  margin: 10px auto;
+  display: grid;
+  padding: 0 20px;
+  gap: 10px;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto; }
+  .service .conjunto_service {
+    grid-column: 1 / 2;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    padding-top: 10px; }
+  .service .conjunto_benefits {
+    border-left: 2px solid #d1d1d1;
+    place-content: center;
+    display: flex;
+    padding: 5px 5px 5px 10px;
+    flex-wrap: wrap;
+    grid-column: 2 / 3;
+    align-items: start;
+    justify-content: center; }
+    .service .conjunto_benefits .conjunto {
+      width: 50%;
+      margin-bottom: 15px; }
+
 .final {
-  background-color: #ddff55;
+  background-color: #6C757D;
   padding: 5px 0; }
   .final p {
     text-align: center;
@@ -162,9 +224,15 @@ header {
   gap: 50px;
   margin: 20px 0; }
 
+footer ul li a {
+  color: black;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
 .redes {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px; }
   .redes span {
     display: none; }

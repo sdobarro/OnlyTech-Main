@@ -1,20 +1,18 @@
 .hero{
-        background-color: black;
+        background-image: url(../img/image.webp);
         width: 100%;
-        height: 550px;
+        height: 590px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        // display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: center;
         color: #fff;
         @extend %flex;
     h2{
         background-color: #000;
-        font-size: 65px
+        font-size: 65px;
     }
     p{
         background-color: #000;
@@ -81,57 +79,125 @@
 
 .productos__imagenes{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 10px;
         max-width: 1100px;
         margin: 0 auto;
         grid-auto-columns: 1fr;
         overflow: hidden;
         margin-bottom: 10px;
-}
 
+        div {
+        place-self: center;
+        }
+}
+.productos__imagenes .boton {
+    transition: background-color .5s;
+}
+.boton:hover {
+    border-radius: 20px;
+    background-color: beige;
+    color: #000;
+}
 .float__whatsapp{
-        position: fixed;
-        bottom: 60px;
-        right: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
 }
 
 /*MAIN CONTACTO*/
 .contact{
         margin: 20px 0;
         font-size: 24px;
-        @extend %flex;
+    h1{
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    }
+    .horario {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600px;
+        color: #555252;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+.formularioContacto {
+        padding-bottom: 20px; }
+.formularioContacto .card {
+        background-color: #f6f5e9;
+        border: #0e0e0e solid 2px; }
+.formularioContacto .card div form div .btn {
+        border: #0e0e0e solid 2px;
+        color: #0e0e0e; }
+.formularioContacto .card div form div .btn:hover {
+        background-color: #6C757D;
+        color: #f6f5e9; 
+}
+.iframemaps{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 ;
 }
 
 /* MAIN Acerca de  */
 .acercade {
-        text-align: center;
-        margin: 20px 0;
+    background-color: #f6f5e9;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding-bottom: 20px; 
 }
-
-.acercade h1{
+.texto{
+    width: 1100px;
+    p{
+        font-size: 24px;
+    }
+}
+.titulo{
         font-family: $tipografiaGeneral;
-}
-.acercade h2{
-        font-family: $tipografiaGeneral;
-}
-
-.acercade img{
-        width: 20em;
-        height: 20rem;
-        margin: 50px;
-        padding: 100px;
-}
-.acercade p{
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
         font-size: 30px;
-}
-.iframeyt{
         display: flex;
         justify-content: center;
-        margin: 5px 0 ;
+}
+
+.iframeyt{
+    @extend %flex
+}
+
+.service{
+    max-width: 1024px;
+    margin: 10px auto;
+    display: grid;
+    padding: 0 20px;
+    gap: 10px;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+
+.conjunto_service {
+        grid-column: 1 / 2;
+        height: 100%;
+        display: flex;;
+        align-items: start;
+        padding-top: 10px;
+    }
+    
+    .conjunto_benefits {
+        border-left: 2px solid #d1d1d1;
+        place-content: center;
+        display: flex;
+        padding: 5px 5px 5px 10px;
+        flex-wrap: wrap;
+        grid-column: 2 / 3;
+        align-items: start;
+        justify-content: center;
+    .conjunto {
+        width: 50%;
+        margin-bottom: 15px;  
+        }
+    }
 }
