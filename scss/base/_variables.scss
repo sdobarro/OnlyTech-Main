@@ -8,3 +8,13 @@ $tipografiaGeneral: 'Poppins', sans-serif;
     justify-content: center;
 }
 
+@mixin flex ($flex, $direction, $justify, $align) {
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.acercade{
+    @include flex (flex, column, center, center)
+}
